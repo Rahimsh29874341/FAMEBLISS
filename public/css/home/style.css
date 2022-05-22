@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
-	background:#ffffff;
+	background-color: rgb(24, 22, 22);
 	margin: 0;
 }
 p,ul li,ol li{
@@ -91,6 +91,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
     margin-bottom: 0;
 }
 .w3_navigation {
+	color: white;
     border-top: 1px solid #999;
 	position:relative;
 }
@@ -106,11 +107,11 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
     margin-right: 0;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color:#fa3d03;
+    color:rgb(32, 222, 32);
     background: none;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #212121;
+    color: white;
 }
 .navbar-nav > li > a {
       margin:1em 1.8em;
@@ -133,16 +134,16 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 }
 .w3_navigation_pos h1 a {
      font-size: 1em;
-    color: #212121;
+    color: white;
     text-decoration: none;
-    border: 3px solid #ff5000;
+    border: 3px solid rgb(32, 222, 32);
     padding: 0.1em .4em;
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
 }
 .navbar-default .navbar-nav > li > a:hover{
-    color: #fa3d03;
+	color:rgb(32, 222, 32);
 }
 /* Effect 5: same word slide in */
 .cl-effect-5 a {
@@ -232,7 +233,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
   bottom: 0;
   left: 0;
   right: 0;
-  background: #ff5000;
+  background: rgb(32, 222, 32);
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -webkit-transform-origin: 50%;
@@ -443,12 +444,12 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 .w3l_head{
 	font-size: 2.5em;
     font-weight: bold;
-    color: #212121;
+    color: white;
 	letter-spacing: 3px;
 	text-align: center;
 }
 .w3ls_head_para{
-	color:#ff5000;
+	color: rgb(32, 222, 32);
 	text-transform:uppercase;
 	letter-spacing:8px;
 	text-align: center;
@@ -489,7 +490,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 .agileits_banner_bottom_grid_l h4{
 	text-transform:capitalize;
 	font-size:1.8em;
-	color:#212121;
+	color:white;
 	line-height:1.5em;
 }
 .agileits_banner_bottom_grid_l p{
@@ -500,7 +501,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 .agileits_banner_bottom_grid_l p i{
 	    display: block;
     margin-bottom: 1em;
-    color: #ff5000;
+    color: rgb(32, 222, 32);
     letter-spacing: 4px;
     font-weight: 400;
 }
@@ -859,7 +860,7 @@ ul#lightGallery {
     margin-top: 2em;
 }
 .w3_mail_grids input[type="submit"]:hover{
- background:#fa3d03;
+ background:rgb(32, 222, 32);
 }
 /*-- mail --*/
 .input {
@@ -881,7 +882,7 @@ ul#lightGallery {
 	border: none;
 	border-radius: 0;
 	background: #f0f0f0;
-	color: #aaa;=
+	color: #aaa;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -1033,7 +1034,7 @@ ul#lightGallery {
 	height:55px;
 	border-radius:50px;
 	text-align:center;
-	background:#fa3d03;
+	background: rgb(32, 222, 32);
 }
 .w3ls_footer_grid_leftl i{
 	color: #fff;
@@ -1072,7 +1073,7 @@ ul#lightGallery {
 	line-height:1.8em;
 }
 .w3l_footer_pos p a{
-	color:#fa3d03;
+	color: rgb(32, 222, 32);
 	text-decoration:underline;
 }
 .w3l_footer_pos p a:hover{
@@ -1085,7 +1086,7 @@ ul#lightGallery {
 	color:#212121;
 }
 .w3ls_footer_grid_left:hover .w3ls_footer_grid_leftr h4{
-	color:#fa3d43;
+	color:rgb(32, 222, 32);
 }
 .w3ls_footer_grid_left {
     background: #2e2e2e;
