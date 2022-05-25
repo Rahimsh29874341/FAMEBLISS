@@ -1,0 +1,42 @@
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    #form{
+        width: 90%;
+        padding: 3rem;
+        margin: auto;
+        background-color: white;
+        box-shadow: 2px 2px 8px 5px gray;
+        border-radius: 0.5rem;
+    }
+    #form ul{
+        list-style: none;
+    }
+    #form ul li{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<form id="form " action="#" class="tab">
+    <ul class="form-list">
+        <li class="form-itmes">
+            <label for="name">Name:</label>
+            <input name="name" type="text" placeholder="Name">
+        </li>
+        <li class="form-itmes">
+            <label for="name">Description</label>
+            <input name="name" type="textarea" placeholder="Decribe your brand">
+        </li>
+        <li class="form-itmes">
+            <label for="name">Brand Url</label>
+            <input name="name" type="url" placeholder="Social media link">
+        </li>
+        <li class="form-itmes">
+            <input type="file" onchange="readURL(this)" accept="Image/*">
+        </li>
+    </ul>
+</form>
