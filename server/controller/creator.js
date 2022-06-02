@@ -70,13 +70,15 @@ exports.update = (req, res,next) => {
     }
 
     const id = req.params.id;
-    creator.findByIdAndUpdate(id,req.body,(err,docs)=>{
+    var name = req.body.name
+    var description = req.body.description
+    var image_file = req.file.filename
+    creator.findByIdAndUpdate(id,{name,description,image_file},(err,docs)=>{
         if(err){
             console.log(err)
             next();
         }else{
-            console.log(req.body.name);
-            console.log(req.body.description);
+            console.log(req.file.filename)
             console.log('Data updated successfully')
             res.redirect('/admin_panel/add_creator')
         }

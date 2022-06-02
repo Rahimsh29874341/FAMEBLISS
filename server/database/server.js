@@ -8,10 +8,9 @@ const webRoutes = require('../routes/web');
 const apiRoutes = require('../routes/api');
 const { dirname } = require("path");
 const morgan = require('morgan');
-const parser = require('body-parser');
+const bodyParser = require('body-parser')
 const hbs = require('hbs');
 const DB = process.env.DB;
-
 
 //load files
 app.use('/dcss',express.static("assets/css/admin"));
@@ -25,7 +24,7 @@ app.use('/dscss',express.static('assets/scss/'));
 // app.use(morgan('tiny'));
 
 //using body-parser
-app.use(parser.json())
+app.use(express.json())
 
 //mongodb connection
 require('../database/connectdb');
@@ -34,7 +33,7 @@ require('../database/connectdb');
 const creator = require('../model/creatorschema'); 
 
 //parse request to body-parser
-app.use(parser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:false}));
 
 //set assets folder as static folder
 app.use('/static',express.static('assets'));

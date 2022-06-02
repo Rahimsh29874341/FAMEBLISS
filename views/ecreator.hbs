@@ -52,7 +52,7 @@
         {{>_navbar}}
         <!-- Topbar -->
 
-        <form class="form-group" id="form" action="/api/update/{{creator._id}}" method="POST" class="tab" enctype="multipart/form-data">
+        <form class="form-group" id="form" action="/api/update/{{creator._id}}" method="post" class="tab" enctype="multipart/form-data">
           <ul class="form-list">
             <li class="form-itmes">
               <label for="name">Name:<i>*</i></label>
@@ -63,8 +63,9 @@
               <input required class="form-control" name="description" type="textarea" placeholder="Decribe your brand"
                 value="{{creator.description}}">
             </li>
-            <li class="form-items">
-              <input id="file" type="file" accept="Image/*" name="image" value="{{creator.image_file}}">
+            <li class="form-items d-flex d-column">
+              <input id="file" type="file" accept="Image/*" name="image" value="">
+              <img src="/img/{{creator.image_file}}" alt="" style="height:4rem;width:4rem;">
             </li>
             <button id="update-user" class="btn btn btn-info ml-3 " style="width:100px ;" type="submit">Save</button>
             <button id="cancel-btn" class="btn btn btn-info ml-3 " style="width:100px ;" type="submit">Cancel
