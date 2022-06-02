@@ -1,14 +1,16 @@
 const express = require("express");
 const path = require("path");
-const app = express();
 const env = require('dotenv');
+const app = express();
 env.config({path:"process.env"});
 const PORT = process.env.PORT || 8080;
-const routes = require('../routes/routes');
+const webRoutes = require('../routes/web');
+const apiRoutes = require('../routes/api');
 const { dirname } = require("path");
 const morgan = require('morgan');
 const parser = require('body-parser');
 const hbs = require('hbs');
+const DB = process.env.DB;
 
 
 //load files
@@ -20,13 +22,23 @@ app.use('/dvendor',express.static('assets/vendor'));
 app.use('/dscss',express.static('assets/scss/'));
 
 //log request
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
+
+//using body-parser
+app.use(parser.json())
+
+//mongodb connection
+require('../database/connectdb');
+
+//getting schema
+const creator = require('../model/creatorschema'); 
 
 //parse request to body-parser
 app.use(parser.urlencoded({extended:true}));
 
 //set assets folder as static folder
 app.use('/static',express.static('assets'));
+app.use('/img',express.static('uploads'))
 
 //set view engine
 // app.set('views','views');
@@ -36,8 +48,13 @@ app.set('view engine', 'hbs');
 hbs.registerPartials("views/partials");
 
 //set use routes file routes
-app.use(routes);
+app.use(webRoutes);
+
+//set api routes
+app.use(apiRoutes);
 
 app.listen(PORT,()=>{
     console.log(`server running on ${PORT}`);
 });
+
+//logic of upload image
