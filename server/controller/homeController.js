@@ -45,6 +45,24 @@ function homeController(){
             }).catch(err=>{
                 console.log(err);
             })
+        },
+        adminOurWork(req,res){
+            axios.get('http://localhost:500/api/pages/find')
+            .then(response=>{
+                if(req.query.id){
+                     axios.get('http://localhost:500/api/pages/find',{params:{id:req.query.id}})
+                    .then(data=>{    
+                        console.log(data.data)     
+                        res.render('aboutPage',{ tittle:'Admin - Dashboard', about:response.data,data:data.data})
+                    }).catch(err=>{
+                        console.log(err)
+                    })
+                }else{
+                    res.render('aboutPage',{about:response.data})
+                }
+            }).catch(err=>{
+                console.log(err);
+            })
         }
     }
 }

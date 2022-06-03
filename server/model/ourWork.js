@@ -19,6 +19,6 @@ var scheme = new mongoose.Schema({
     }
 });
 
-var ourWork = mongoose.model("creator_records", scheme);
+var ourWork = mongoose.model("aboutPages_record", scheme);
 
 module.exports = ourWork;

@@ -5,6 +5,7 @@ const upload = require('../helper/multer')
 const controller = require('../controller/influencerController')
 const { updateOne } = require('../model/influencer')
 const clientsController = require('../controller/clientsController')
+const aboutController = require('../controller/aboutController')
 
 //api routes for influencers
 router.post('/api/create',upload,controller.create)
@@ -18,5 +19,9 @@ router.post('/api/insert',upload,clientsController.create)
 router.get('/api/get',clientsController.find)
 router.post('/api/change/:id',upload,clientsController.update)
 router.get('/api/remove/:id',clientsController.delete)
+
+//api routes for pages
+router.get('/api/pages/find',aboutController.find)
+router.post('/api/pages/update/:id',upload,aboutController.update)
 
 module.exports = router

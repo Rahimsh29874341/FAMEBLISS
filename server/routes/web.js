@@ -15,4 +15,8 @@ router.get('/admin_panel/add_influencer',homeController().adminAddCreator)
 router.get('/admin_panel/edit_influencer',homeController().adminEditCreator)
 router.get('/admin_panel/add_client',homeController().adminAddBrand)
 router.get('/admin_panel/edit_client',homeController().adminEditBrand)
+
+//pages
+router.get('/admin_panel/pages/our_work',homeController().adminOurWork)
+
 module.exports = router;
