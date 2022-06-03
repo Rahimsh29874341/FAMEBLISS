@@ -2,11 +2,17 @@ const express = require('express')
 const router = express.Router();
 const homeController = require('../controller/homeController')
 
+//for home
 router.get('/',homeController().index)
+
+//for admin authentication
 router.get('/login',homeController().adminLogin)
 router.get('/register',homeController().adminRegister)
-router.get('/admin_panel',homeController().adminDashboard)
-router.get('/admin_panel/add_creator',homeController().adminAddCreator)
-router.get('/admin_panel/edit_creator',homeController().adminEditCreator)
 
+//for admin
+router.get('/admin_panel',homeController().adminDashboard)
+router.get('/admin_panel/add_influencer',homeController().adminAddCreator)
+router.get('/admin_panel/edit_influencer',homeController().adminEditCreator)
+router.get('/admin_panel/add_client',homeController().adminAddBrand)
+router.get('/admin_panel/edit_client',homeController().adminEditBrand)
 module.exports = router;

@@ -1,6 +1,6 @@
 const req = require('express/lib/request');
 const res = require('express/lib/response');
-const creator = require('../model/creatorschema');
+const creator = require('../model/influencer');
 
 
 //create and save new user
@@ -15,6 +15,7 @@ exports.create = (req, res) => {
     const user = new creator({
             name : req.body.name,
             description: req.body.description,
+            brand_url: req.body.brand_url,
             image_file: req.file.filename
     })
     //save user in the database
@@ -22,7 +23,7 @@ exports.create = (req, res) => {
         .save(user)
         .then(data => {
             // res.send(data)
-            res.redirect("/admin_panel/add_creator")
+            res.redirect("/admin_panel/add_influencer")
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "some error occurred white creating a create operation"
@@ -80,7 +81,7 @@ exports.update = (req, res,next) => {
         }else{
             console.log(req.file.filename)
             console.log('Data updated successfully')
-            res.redirect('/admin_panel/add_creator')
+            res.redirect('/admin_panel/add_influencer')
         }
     })
         
@@ -96,7 +97,7 @@ exports.delete = (req, res,next) => {
             next();
         }else{
             console.log('data Deleted Succesfully')
-            res.redirect('/admin_panel/add_creator')
+            res.redirect('/admin_panel/add_influencer')
         }
     })
 }

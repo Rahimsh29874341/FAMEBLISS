@@ -30,7 +30,7 @@ app.use(express.json())
 require('../database/connectdb');
 
 //getting schema
-const creator = require('../model/creatorschema'); 
+const creator = require('../model/influencer'); 
 
 //parse request to body-parser
 app.use(express.urlencoded({extended:false}));

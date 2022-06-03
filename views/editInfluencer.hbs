@@ -10,33 +10,37 @@
   <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="/static/css/admin/ruang-admin.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <style>
-    *{
-        padding: 0%;
-        margin: 0%;
-        box-sizing: border-box;
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
     }
 
-    #form{
-        width: 90%;
-        padding: 2rem;
-        margin: auto;
-        background-color: white;
-        box-shadow: 2px 2px 8px 5px gray;
-        border-radius: 0.5rem;
+    #form {
+      width: 90%;
+      padding: 2rem;
+      margin: auto;
+      background-color: white;
+      box-shadow: 2px 2px 8px 5px gray;
+      border-radius: 0.5rem;
     }
-    #form ul{
-        list-style: none;
+
+    #form ul {
+      list-style: none;
     }
-    #form ul li{
-        margin: 1rem;
+
+    #form ul li {
+      margin: 1rem;
     }
-    i{
-        color: red;
+
+    i {
+      color: red;
     }
-</style>
+  </style>
 
 </head>
 
@@ -52,7 +56,8 @@
         {{>_navbar}}
         <!-- Topbar -->
 
-        <form class="form-group" id="form" action="/api/update/{{creator._id}}" method="post" class="tab" enctype="multipart/form-data">
+        <form class="form-group" id="form" action="/api/update/{{creator._id}}" method="post" class="tab"
+          enctype="multipart/form-data">
           <ul class="form-list">
             <li class="form-itmes">
               <label for="name">Name:<i>*</i></label>
@@ -62,6 +67,11 @@
               <label for="description">Description:<i>*</i></label>
               <input required class="form-control" name="description" type="textarea" placeholder="Decribe your brand"
                 value="{{creator.description}}">
+            </li>
+            <li class="form-itmes">
+              <label for="brand_url">brand Url:<i>*</i></label>
+              <input required class="form-control" name="brand_url" type="textarea" placeholder="brand url"
+                value="{{creator.brand_url}}">
             </li>
             <li class="form-items d-flex d-column">
               <input id="file" type="file" accept="Image/*" name="image" value="">
@@ -82,7 +92,8 @@
     <script src="/static/js/admin/ruang-admin.min.js"></script>
     <script src="/static/vendor/chart.js/Chart.min.js"></script>
     <script src="/static/js/admin/demo/chart-area-demo.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"></script>
     <script src="/static/js/addcreator.js"></script>
 </body>
 

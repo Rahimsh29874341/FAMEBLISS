@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 var scheme = new mongoose.Schema({
    
-    name : {
+    heading : {
         type: String,
         unique : false,
         required : true
@@ -19,6 +19,6 @@ var scheme = new mongoose.Schema({
     }
 });
 
-var Student = mongoose.model("creator_records", scheme);
+var ourWork = mongoose.model("creator_records", scheme);
 
-module.exports = Student;
+module.exports = ourWork;
