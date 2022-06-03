@@ -50,9 +50,9 @@ function homeController(){
             axios.get('http://localhost:500/api/pages/find')
             .then(response=>{
                 if(req.query.id){
+                    console.log(req.body)
                      axios.get('http://localhost:500/api/pages/find',{params:{id:req.query.id}})
-                    .then(data=>{    
-                        console.log(data.data)     
+                    .then(data=>{        
                         res.render('aboutPage',{ tittle:'Admin - Dashboard', about:response.data,data:data.data})
                     }).catch(err=>{
                         console.log(err)

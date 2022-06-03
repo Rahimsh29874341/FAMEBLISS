@@ -39,15 +39,15 @@ exports.update = (req, res,next) => {
     }
 
     const id = req.params.id;
-    var name = req.body.name
+    var heading = req.body.heading
     var description = req.body.description
     var image_file = req.file.filename
-    ourWork.findByIdAndUpdate(id,{name,description,image_file},(err,docs)=>{
+    ourWork.findByIdAndUpdate(id,{heading,description,image_file},(err,docs)=>{
         if(err){
             console.log(err)
             next();
         }else{
-            console.log(req.file.filename)
+            console.log(docs)
             console.log('Data updated successfully')
             res.redirect('/admin_panel/pages/our_work')
         }
