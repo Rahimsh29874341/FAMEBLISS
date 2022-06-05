@@ -10,11 +10,11 @@ router.get('/login',homeController().adminLogin)
 router.get('/register',homeController().adminRegister)
 
 //for admin
-router.get('/admin_panel',homeController().adminDashboard)
-router.get('/admin_panel/add_influencer',homeController().adminAddCreator)
-router.get('/admin_panel/edit_influencer',homeController().adminEditCreator)
-router.get('/admin_panel/add_client',homeController().adminAddBrand)
-router.get('/admin_panel/edit_client',homeController().adminEditBrand)
+router.get('/admin',homeController().adminDashboard)
+router.get('/admin/influencer/index',homeController().influencer)
+router.get('/admin/influencer/create',homeController().influencer_create)
+router.get('/admin/client/index',homeController().client)
+router.get('/admin/client/create',homeController().client_create)
 
 //pages
 router.get('/admin_panel/pages/our_work',homeController().adminOurWork)

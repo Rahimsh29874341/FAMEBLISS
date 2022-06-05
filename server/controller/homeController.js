@@ -14,38 +14,20 @@ function homeController(){
         adminDashboard(req,res){
             res.render('dashboard')
         },
-        adminAddCreator(req,res){
-            axios.get('http://localhost:500/api/find')
-            .then(response=>{
-                res.render('addInfluencer',{ tittle:'Admin - Dashboard', creator:response.data})
-            }).catch(err=>{
-                console.log(err);
-            })
+        influencer(req,res){
+            res.render('influencers/index')
         },
-        adminEditCreator(req,res){
-            axios.get('http://localhost:500/api/find',{params:{id:req.query.id}})
-            .then(response=>{
-                res.render('editInfluencer',{creator:response.data})
-            }).catch(err=>{
-                console.log(err);
-            })
+        influencer_create(req,res){
+            res.render('influencers/create')
         },
-        adminAddBrand(req,res){
-            axios.get('http://localhost:500/api/get')
-            .then(response=>{
-                res.render('addClients',{ tittle:'Admin - Dashboard', client:response.data})
-            }).catch(err=>{
-                console.log(err);
-            })
+        client(req,res){
+            res.render('client/index')
         },
-        adminEditBrand(req,res){
-            axios.get('http://localhost:500/api/get',{params:{id:req.query.id}})
-            .then(response=>{
-                res.render('editClients',{client:response.data})
-            }).catch(err=>{
-                console.log(err);
-            })
+        client_create(req,res){
+            res.render('client/create')
         },
+
+
         adminOurWork(req,res){
             axios.get('http://localhost:500/api/pages/find')
             .then(response=>{

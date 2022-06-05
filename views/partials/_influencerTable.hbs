@@ -1,0 +1,66 @@
+{{>_header}}
+<div class="container">
+    <div class=" mb-3 btn-group d-flex justify-content-center" role="group"
+        aria-label="Basic checkbox toggle button group">
+
+       
+        <button class="btn btn-outline-primary" id="newBtn" type="button">New</button>
+
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">image</th>
+                <th scope="col">Name</th>
+                <th scope="col">description</th>
+                <th scope="col">brand url</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td> {{this.length}} </td>
+                <td class=""> <img src="/img/{{{this.image_file}}}" alt="" style="height: 3rem;width:3rem;"> </td>
+                <td> {{this.name}} </td>
+                <td> {{this.description}} </td>
+                <td> {{this.brand_url}} </td>
+                <td>
+                    <a href="/api/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"
+                        class="fa fa-trash mx-2">
+                    </a>
+
+                    <a href="/admin/edit_influencer?id={{this._id}}" class="fa fa-edit mx-2"></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+   
+</div>
+
+<script>
+
+
+ $("#newBtn").click(function () {
+        $.ajax({
+
+            url: '/admin/influencer/create',
+
+        })
+            .done(function (response) {
+                $("#actionContainer").html(response);
+
+                focusAction("actionContainer");
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fail")
+            });
+    });
+
+
+
+
+
+</script>
