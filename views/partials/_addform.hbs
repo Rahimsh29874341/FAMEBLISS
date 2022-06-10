@@ -29,6 +29,10 @@
 <form class="form-group" id="form" action="/api/create" method="POST" class="tab" enctype="multipart/form-data">
     <ul class="form-list">
         <li class="form-itmes">
+            <label for="id">id:<i>*</i></label>
+            <input required class="form-control" name="id" type="number" placeholder="id" value="{{data.id}}">
+        </li>
+        <li class="form-itmes">
             <label for="name">Name:<i>*</i></label>
             <input required class="form-control" name="name" type="text" placeholder="Name" value="{{data.name}}">
         </li>

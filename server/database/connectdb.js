@@ -1,14 +1,21 @@
-const mongoose = require('mongoose');
-const MONGO_URI = process.env.MONGO_URI;
+const mysql = require('mysql');
+const dbDetails = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "rahim12345",
+    database: "influencer"
 
-mongoose.connect(MONGO_URI,
-  {
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true,
-    useFindAndModify:false
-  }).then(()=>{
-     console.log("database connected");
-  }).catch((err)=>{
-    console.log("Error in the code"+err);    
-  })
+});
+dbDetails.connect((error) =>
+{
+    if (error) {
+
+        console.log(error);
+    } else {
+
+        console.log("DB Connection Successful");
+    }
+})
+
+module.exports = dbDetails;
