@@ -1,7 +1,7 @@
 const multer = require('multer');
 
 const storage = multer.diskStorage({
-  fileSize: 1024 * 1024,
+  fileSize: 1024*1024*2,
   destination: function (req, file, cb) {
     cb(null, './uploads')
   },

@@ -22,32 +22,31 @@
                 <div class="form-head">
                     <div class="section-head text-center">
                         <h4 class="sm-title fs-1 ">
-                            Add Influencer
+                            Edit Influencer
                         </h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="contact-form pt-4">
-
-                        <form class="form-group" id="form" action="/api/create" method="POST" class="tab"
+                        <form class="form-group" id="form" action="/api/update/{{data.id}}" method="POST" class="tab"
                             enctype="multipart/form-data">
                             <ul class="form-list">
                                 <li class="form-itmes">
                                     <label for="name">Name:<i>*</i></label>
-                                    <input required class="form-control" name="name" type="text" placeholder="Name">
+                                    <input required class="form-control" name="name" type="text" placeholder="Name" value="{{data.name}}">
                                 </li>
                                 <li class="form-itmes">
                                     <label for="description">Description:<i>*</i></label>
                                     <input required class="form-control" name="description" type="textarea"
-                                        placeholder="Decribe your brand">
+                                        placeholder="Decribe your brand" value="{{data.description}}">
                                 </li>
                                 <li class="form-itmes">
                                     <label for="brand_url">brand Url:<i>*</i></label>
                                     <input required class="form-control" name="brand_url" type="textarea"
-                                        placeholder="brand url">
+                                        placeholder="brand url" value="{{data.brand_url}}">
                                 </li>
                                 <li class="form-items">
-                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)">
+                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)" value="{{data.image_file}}">
                                 </li>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>

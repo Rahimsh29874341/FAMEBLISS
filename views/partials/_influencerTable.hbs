@@ -3,7 +3,7 @@
     <div class=" mb-3 btn-group d-flex justify-content-center" role="group"
         aria-label="Basic checkbox toggle button group">
 
-       
+
         <button class="btn btn-outline-primary" id="newBtn" type="button">New</button>
 
     </div>
@@ -27,23 +27,22 @@
                 <td> {{this.description}} </td>
                 <td> {{this.brand_url}} </td>
                 <td>
-                    <a href="/api/delete/{{this.id}}" onclick="return confirm('Are you sure to delete this record ?');"
-                        class="fa fa-trash mx-2">
+                    <a class="fa fa-trash mx-2 deleteBtn" data-id="{{this.id}}">
                     </a>
 
-                    <a href="/admin/influencer/create?id={{this.id}}" class="fa fa-edit mx-2"></a>
+                    <a data-id="{{this.id}}" class="fa fa-edit mx-2 editBtn"></a>
                 </td>
             </tr>
             {{/each}}
         </tbody>
     </table>
-   
+
 </div>
 
 <script>
 
 
- $("#newBtn").click(function () {
+    $("#newBtn").click(function () {
         $.ajax({
 
             url: '/admin/influencer/create',
@@ -61,6 +60,63 @@
 
 
 
+    $(".editBtn").click(function () {
+        $.ajax({
 
+            url: '/admin/influencer/edit',
+            data: {
+                ID: $(this).attr('data-id')
+            }
+
+        })
+            .done(function (response) {
+                $("#actionContainer").html(response);
+
+                focusAction("actionContainer");
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fail")
+            });
+    });
+
+    
+    $(".deleteBtn").click(function () {
+        swal({
+            title: "Confirm?",
+            text: "Are You Want To Delete This Product!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+ 
+
+                    $.ajax({
+                        type: 'Post',
+                        url: '/api/delete/',
+                        data: {
+                            ID: $(this).attr('data-id'),
+                        }
+                        
+
+                    })
+                        .done(function (response) {
+                            $("#tableContainer").html(response);
+
+                            swal("Record Deleted Successfully", {
+                                icon: "success",
+                            });
+
+                        })
+                        .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert("Fail")
+                        });
+
+                }
+            });
+
+
+    });
 
 </script>

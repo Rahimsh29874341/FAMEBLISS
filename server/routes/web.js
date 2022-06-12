@@ -13,10 +13,11 @@ router.get('/register',homeController().adminRegister)
 router.get('/admin',homeController().adminDashboard)
 router.get('/admin/influencer/index',homeController().influencer)
 router.get('/admin/influencer/create',homeController().influencer_create)
+router.get('/admin/influencer/edit',homeController().influencer_edit)
 router.get('/admin/client/index',homeController().client)
 router.get('/admin/client/create',homeController().client_create)
 
 //pages
-router.get('/admin_panel/pages/our_work',homeController().adminOurWork)
+router.get('/admin/pages/about',homeController().adminAbout)
 
 module.exports = router;

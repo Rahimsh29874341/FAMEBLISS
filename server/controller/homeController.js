@@ -24,9 +24,12 @@ function homeController() {
                 })
         },
         influencer_create(req, res) {
+            res.render('influencers/create', { influencer: response.data } )
+        },
+        influencer_edit(req, res) {
             axios.get('http://localhost:500/api/find',{params:{id:req.query.id}})
                 .then(response => {
-                    res.render('influencers/create', { creator: response.data } )
+                    res.render('influencers/edit', { data: response.data } )
                 }).catch(err => {
                     console.log(err)
                 })
@@ -39,22 +42,13 @@ function homeController() {
         },
 
 
-        adminOurWork(req, res) {
+        adminAbout(req, res) {
             axios.get('http://localhost:500/api/pages/find')
                 .then(response => {
-                    if (req.query.id) {
-                        console.log(req.body)
-                        axios.get('http://localhost:500/api/pages/find', { params: { id: req.query.id } })
-                            .then(data => {
-                                res.render('aboutPage', { tittle: 'Admin - Dashboard', about: response.data, data: data.data })
-                            }).catch(err => {
-                                console.log(err)
-                            })
-                    } else {
-                        res.render('aboutPage', { about: response.data })
-                    }
+                    console.log(response.data)
+                    res.render('aboutPage', { about: response.data })
                 }).catch(err => {
-                    console.log(err);
+                    console.log(err)
                 })
         }
     }

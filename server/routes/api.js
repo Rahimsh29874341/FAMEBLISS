@@ -8,10 +8,10 @@ const clientsController = require('../controller/clientsController')
 const aboutController = require('../controller/aboutController')
 
 //api routes for influencers
-router.post('/api/create',upload.single('image'),controller.create)
+router.post('/api/create', upload.single('image') ,controller.create)
 router.get('/api/find',controller.find)
-router.post('/api/update/:id',upload.single('image'),controller.update)
-router.get('/api/delete/:id',controller.delete)
+router.post('/api/update/:id', upload.single('image') ,controller.update)
+router.post('/api/delete/:id',controller.delete)
 
 
 // //api routes for clients
@@ -21,7 +21,7 @@ router.get('/api/delete/:id',controller.delete)
 // router.get('/api/remove/:id',clientsController.delete)
 
 // //api routes for pages
-// router.get('/api/pages/find',aboutController.find)
-// router.post('/api/pages/update/:id',upload,aboutController.update)
+router.get('/api/pages/find',aboutController.find)
+router.post('/api/pages/update/:id',upload.single('image'),aboutController.update)
 
 module.exports = router
