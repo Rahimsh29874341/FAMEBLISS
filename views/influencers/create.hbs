@@ -1,4 +1,115 @@
 
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    #form ul{
+        list-style: none;
+    }
+    #form ul li{
+        margin: 1rem;
+    }
+    i{
+        color: red;
+    }
+</style>
+
         <!-- form -->
-        {{>_addform data = influencer}}
-        <!-- form/ -->
+        <div class="container">
+    <div class="row">
+
+        <div class="col-md-8 col-10 col-sm-8">
+            <div class="form-inside">
+                <div class="form-head">
+                    <div class="section-head text-center">
+                        <h4 class="sm-title fs-1 ">
+                            Add Influencer
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form pt-4">
+
+                        <form class="form-group" id="form" action="/api/create" id="addinfluencer" method="POST" class="tab"
+                            enctype="multipart/form-data">
+                            <ul class="form-list">
+                                <li class="form-itmes">
+                                 <label  id="name-error" class="error" for="name" ></label>
+                                 <input required class="form-control" name="name" type="text" placeholder="Name">
+                                </li>
+                                <li class="form-itmes">
+                                       <label  id="description-error" class="error" for="description" ></label>
+                                    <input required class="form-control" name="description" type="textarea"
+                                        placeholder="Decribe your brand">
+                                </li>
+                                <li class="form-itmes">
+                                    <label for="brand_url">brand Url:<i>*</i></label>
+                                    <input required class="form-control" name="brand_url" type="textarea"
+                                        placeholder="brand url">
+                                </li>
+                                <li class="form-items">
+                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)">
+                                </li>
+                                <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
+                                    type="submit">Save</button>
+                                <button id="cancel-btn" class="btn btn btn-info ml-3 " style="width:100px ;"
+                                    type="submit">Cancel
+                                </button>
+                            </ul>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-2 col-sm-4 d-flex justify-content-center align-items-center">
+            <img id="output" class="img-fluid img-thumbnail" src="/static/images/default.jpg"  />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+ <script>
+        var loadFile = function(event) {
+              var output = document.getElementById('output');
+              output.src = URL.createObjectURL(event.target.files[0]);
+              output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+              }
+            };
+
+
+            
+    $('#addinfluencer').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 5,
+                maxlength: 50
+            },
+            description: {
+                maxlength: 500
+            }
+          
+        },
+        messages: {
+            name: {
+                required: 'Name is required',
+                minlength: 'Minimum length is 5',
+                maxlength: 'Maximum length is 50'
+            },
+            description: {
+                maxlength: 'Maximum length is 500'
+            }
+           
+        }
+    });
+
+</script>

@@ -28,25 +28,26 @@
                 </div>
                 <div class="row">
                     <div class="contact-form pt-4">
-                        <form class="form-group" id="form" action="/api/update/{{data.id}}" method="POST" class="tab"
+                         {{#each data}}
+                        <form class="form-group" id="form" action="/api/update/{{this.id}}" method="POST" class="tab"
                             enctype="multipart/form-data">
                             <ul class="form-list">
                                 <li class="form-itmes">
                                     <label for="name">Name:<i>*</i></label>
-                                    <input required class="form-control" name="name" type="text" placeholder="Name" value="{{data.name}}">
+                                    <input required class="form-control" name="name" type="text" placeholder="Name" value="{{this.name}}">
                                 </li>
                                 <li class="form-itmes">
                                     <label for="description">Description:<i>*</i></label>
                                     <input required class="form-control" name="description" type="textarea"
-                                        placeholder="Decribe your brand" value="{{data.description}}">
+                                        placeholder="Decribe your brand" value="{{this.description}}">
                                 </li>
                                 <li class="form-itmes">
                                     <label for="brand_url">brand Url:<i>*</i></label>
                                     <input required class="form-control" name="brand_url" type="textarea"
-                                        placeholder="brand url" value="{{data.brand_url}}">
+                                        placeholder="brand url" value="{{this.brand_url}}">
                                 </li>
                                 <li class="form-items">
-                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)" value="{{data.image_file}}">
+                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)" value="{{this.image_file}}">
                                 </li>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>
@@ -54,15 +55,16 @@
                                     type="submit">Cancel
                                 </button>
                             </ul>
+                           
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4 col-2 col-sm-4 d-flex justify-content-center align-items-center">
-            <img id="output" class="img-fluid img-thumbnail" src="default.png" />
+            <img id="output" class="img-fluid img-thumbnail" src="/img/{{this.image_file}}" />
         </div>
+       {{/each}}
     </div>
 </div>

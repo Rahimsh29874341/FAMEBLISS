@@ -11,7 +11,7 @@ const aboutController = require('../controller/aboutController')
 router.post('/api/create', upload.single('image') ,controller.create)
 router.get('/api/find',controller.find)
 router.post('/api/update/:id', upload.single('image') ,controller.update)
-router.post('/api/delete/:id',controller.delete)
+router.get('/api/delete/:id', controller.delete)
 
 
 // //api routes for clients

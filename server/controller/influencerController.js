@@ -9,7 +9,7 @@ exports.create = (req, res, next) => {
         res.status(400).send({ message: "content cannot be empty !!" })
         return
     }
-    let data = {id: Math.random()*9000, name: req.body.name, description: req.body.description, brand_url: req.body.brand_url, image_file: req.file.filename };
+    let data = {id: Math.random()*900, name: req.body.name, description: req.body.description, brand_url: req.body.brand_url, image_file: req.file.filename };
     let sql = "INSERT INTO influencer SET ?";
     db.query(sql, data, (err, results) => {
         if (err) throw err;
@@ -20,8 +20,8 @@ exports.create = (req, res, next) => {
 
 //retrive and show all creator data
 exports.find = (req, res, next) => {
-    if (req.body.id) {
-        db.query('select * from customers where Id=?', [req.body.id], function (error, results, fields) {  if (error) throw error;  
+    if (req.query.id) {
+        db.query('select * from influencer where Id=?', [req.query.id], function (error, results, fields) {  if (error) throw error;  
         res.send(results) });
     } else {
         let sql = "SELECT * FROM influencer";
@@ -35,7 +35,7 @@ exports.find = (req, res, next) => {
 //updating the data
 exports.update = (req, res, next) => {
     const userId = req.params.id;
-    let sql = "update influencer SET id='" + req.body.id + "', name='" + req.body.name + "',  description='" + req.body.description + "',  brand_url='" + req.body.brand_url + "', image_file='" + req.body.image_file + "' where id =" + userId;
+    let sql = "update influencer SET id='" + Math.random()*900 + "', name='" + req.body.name + "',  description='" + req.body.description + "',  brand_url='" + req.body.brand_url + "', image_file='" + req.file.filename + "' where id =" + userId;
     db.query(sql, (err, results) => {
         if (err) throw err;
         res.redirect('/admin/influencer/index');
@@ -48,5 +48,6 @@ exports.delete = (req, res, next) => {
     var sql = `DELETE from influencer where id = ${userId}`;
     db.query(sql, (err, result) => {
         if (err) throw err;
+        res.redirect('/admin/influencer/index')
     });
 }
