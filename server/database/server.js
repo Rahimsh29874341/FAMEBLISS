@@ -11,6 +11,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const hbs = require('hbs');
 const DB = process.env.DB;
+const passport = require('passport')
+const session = require('express-session')
+const mysqlStore = require('express-mysql-session')(session)
 
 //load files
 app.use('/dcss',express.static("assets/css/admin"));
@@ -23,6 +26,13 @@ app.use('/dscss',express.static('assets/scss/'));
 //log request
 // app.use(morgan('tiny'));
 
+// using flash
+
+//hbs helpers
+hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
 //using body-parser
 app.use(express.json())
 
@@ -31,6 +41,7 @@ require('../database/connectdb');
 
 //getting schema
 const creator = require('../model/influencer'); 
+const { options } = require("../routes/api");
 
 //parse request to body-parser
 app.use(express.urlencoded({extended:false}));
@@ -52,8 +63,37 @@ app.use(webRoutes);
 //set api routes
 app.use(apiRoutes);
 
-app.listen(PORT,()=>{
-    console.log(`server running on ${PORT}`);
-});
+//session details
+const details ={
+    connectionLimit: 10,
+    password: 'rahim12345',
+    user: 'root',
+    database: 'influencer',
+    host: 'localhost',
+    port: '3306',
+    createDatabaseTable: true
+    
+}
 
-//logic of upload image
+//session config
+const sessionStore = new mysqlStore(details);
+app.use(session({
+    resave: false,
+    saveUninitialized: false,
+    store: sessionStore,
+    secret: process.env.secrete_key,
+    cookie: {
+        maxAge: 1000*60*60*24,
+        sameSite: true,
+    }
+}))
+
+// Passport config
+const passportInit = require('../helper/passport')
+passportInit(passport);
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.listen(PORT,()=>{
+    console.log(`server running on http://localhost:${PORT}/`);
+});

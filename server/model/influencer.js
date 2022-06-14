@@ -1,29 +1,32 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require("sequelize");
+const db = require('../database/connectdb')
 
-var scheme = new mongoose.Schema({
+// const scheme = db.define("Influencer",{
    
-    name : {
-        type: String,
-        unique : false,
-        required : true
-    },
-    description : {
-        type: String,
-        unique : false,
-        required : true
-    },
-    brand_url : {
-        type: String,
-        unique : false,
-        required : true
-    },
-    image_file :
-    {
-        type: String,
-        unique : false
-    }
-});
+//     name : {
+//         type: String,
+//         unique : false,
+//         required : true
+//     },
+//     description : {
+//         type: String,
+//         unique : false,
+//         required : true
+//     },
+//     brand_url : {
+//         type: String,
+//         unique : false,
+//         required : true
+//     },
+//     image_file :
+//     {
+//         type: String,
+//         unique : false
+//     },
+//     status:{
+//         type: String,
+//         required:true
+//     }
+// });
 
-var influencer = mongoose.model("creator_records", scheme);
-
-module.exports = influencer;
+// module.exports = influencer;

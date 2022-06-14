@@ -49,6 +49,15 @@
                                 <li class="form-items">
                                     <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)" value="{{this.image_file}}">
                                 </li>
+                                <li class="form-items d-flex align-items-center">
+                                {{#ifEquals this.status "Active"}}
+                                    <input type="radio" id="Active" name="status" checked value="Active" class="mx-2">Active<br>
+                                    <input type="radio" id="Inactive" name="status" value="Inactive"class="mx-2">Inactive<br>
+                                {{else}}
+                                    <input type="radio" id="Active" name="status"  value="Active" class="mx-2">Active<br>
+                                    <input type="radio" id="Inactive" name="status" checked value="Inactive"class="mx-2">Inactive<br>
+                                {{/ifEquals}}
+                                </li>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>
                                 <button id="cancel-btn" class="btn btn btn-info ml-3 " style="width:100px ;"

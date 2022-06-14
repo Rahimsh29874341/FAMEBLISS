@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Fantasy World A Games Category Flat Bootstrap Responsive Website Template | Home </title>
+<title> Famebliss | Home </title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						<span class="icon-bar"></span>
 					</button>
 					<div class="w3_navigation_pos">
-						<h1><a href="index.html"><span>Fantasy</span> World</a></h1>
+						<h1><a href="index.html"><span>fame</span> bliss</a></h1>
 					</div>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -330,25 +330,27 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<div class="projects" id="projects">
 		<div class="container">
 			<div class="port-head">
-					 <h3 class="w3l_head w3l_head1">Latest News</h3>
-			         <p class="w3ls_head_para w3ls_head_para1">View Our Fantasy Games</p>
+					 <h3 class="w3l_head w3l_head1">Influencers</h3>
+			         <p class="w3ls_head_para w3ls_head_para1">View Our Influencer</p>
 			</div>
 		</div>
 		<div class="projects-grids">
 				<div class="sreen-gallery-cursual">
 
 			<div id="owl-demo" class="owl-carousel owl-theme">
+				{{#each influencerData}}
 					<div class="item">
 						<div class="projects-agile-grid-info">
-							<img src="/static/images/s1.jpg" alt="" />
+							<img src="/img/{{this.image_file}}" alt="" />
 							<div class="projects-grid-caption"> 
 								
-							<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
+							<a target="_blank" href="{{this.brand_url}}"> {{this.name}} </a>
+								<p> {{this.description}} </p>
 							</div>
 						</div>	
 					</div>
-					<div class="item">
+				{{/each}}
+					{{!-- <div class="item">
 						<div class="projects-agile-grid-info">
 							<img src="/static/images/s2.jpg" alt="" />
 							<div class="projects-grid-caption"> 
@@ -416,7 +418,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 								<p>Lorem ipsum</p>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 			</div>
 		</div>
 	</div>

@@ -676,15 +676,18 @@ a.hi-icon img {
     overflow: hidden;	
 }
 .projects-agile-grid-info img{
+	background-size: cover;
 	width:100%;
+	height: 80vh;
 }
 i.fa.fa-cutlery {
     color: #FFFFFF;
     font-size: 2em;
 }
-.projects-grid-caption h4 {
-      color: #fff;
-    font-size: 1.7em;
+.projects-grid-caption a {
+	text-decoration: none;
+    color: #fff;
+    font-size: 1em;
     font-weight: 700;
     margin: 7.2em 0 0.5em 0;
     text-transform: uppercase;

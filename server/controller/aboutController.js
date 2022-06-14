@@ -4,12 +4,16 @@ const ourWork = require('../model/ourWork');
 const db = require('../database/connectdb');
 
 exports.find = (req, res, next) => {
+    if (req.query.id) {
+        db.query('SELECT * FROM about where Id=?', [req.query.id], function (error, results, fields) {  if (error) throw error;  
+        res.send(results) });
+    } else {
         let sql = "SELECT * FROM about";
         db.query(sql, (err, rows) => {
             if (err) throw err;
             res.send(rows)
-            console.log(rows)
         });
+    }
 }
 
 //updating the data

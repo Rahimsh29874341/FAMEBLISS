@@ -32,8 +32,7 @@
                 <div class="row">
                     <div class="contact-form pt-4">
 
-                        <form class="form-group" id="form" action="/api/create" id="addinfluencer" method="POST" class="tab"
-                            enctype="multipart/form-data">
+                        <form class="form-group" id="form" action="/api/create" id="addinfluencer" method="POST" class="tab" enctype="multipart/form-data">
                             <ul class="form-list">
                                 <li class="form-itmes">
                                  <label  id="name-error" class="error" for="name" ></label>
@@ -51,6 +50,12 @@
                                 </li>
                                 <li class="form-items">
                                     <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)">
+                                </li>
+                                <li class="form-items d-flex align-items-center">
+                                    <input type="radio" id="Active" name="status" value="Active" class="mx-2">
+                                    <label for="Active">Active</label><br>
+                                    <input type="radio" id="Inactive" name="status" value="Inactive" class="mx-2">
+                                    <label for="Inactive">Inactive</label><br>
                                 </li>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>
