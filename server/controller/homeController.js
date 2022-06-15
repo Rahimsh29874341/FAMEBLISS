@@ -6,6 +6,13 @@ function homeController() {
         index(req, res) {
             axios.get('http://localhost:500/api/featured')
               .then(influencer =>{
+                axios.get('http://localhost:500/api/isfeatured')
+                .then(response=>{
+                    console.log(response.data)
+                    res.render('index', {clientData: response.data, influencerData: influencer.data })
+                }).catch(err=>{
+                    console.log(err)
+                })
                 res.render('index', { tittle: 'Admin - Dashboard', influencerData: influencer.data })
               }).catch(err=>{
                 console.log(err);

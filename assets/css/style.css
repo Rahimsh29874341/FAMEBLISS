@@ -1,3 +1,9 @@
+
+
+
+
+
+
 html, body{
 	--main-color: rgb(32,222,32);
 	--text-color:white;
@@ -9,7 +15,7 @@ html, body{
 p,ul li,ol li{
 	margin:0;
 	font-size:14px;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Jura', sans-serif;
@@ -93,9 +99,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 .navbar-nav {
     float: none;
     margin: 1em 0 1em 0;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+
 }
 .navbar-collapse {
     padding: 0;
@@ -127,17 +131,27 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 }
 .w3_navigation_pos {
     position: absolute;
-    top: 24%;
+    top: 10%;
     left: 35%;
     z-index: 999;
 }
-.w3_navigation_pos h1 a {
-     font-size: 1em;
+.w3_navigation_pos h1{
+	padding: 0rem 1rem;
+	border : 3px solid green ;
+}
+
+.w3_navigation_pos h1 a img {
+	padding-right: 0.15em;
+	height: 60px;
+	width: 50px;
+
+}
+.w3_navigation_pos h1 a span{
+    font-size: 2rem;
     color: var(--text-color);
     text-decoration: none;
-    border: 3px solid var(--main-color);
-    padding: 0.1em .4em;
-    font-weight: 700;
+    padding: 0em 0.1em;
+    font-weight: bolder;
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
 }
@@ -678,16 +692,15 @@ a.hi-icon img {
 .projects-agile-grid-info img{
 	background-size: cover;
 	width:100%;
-	height: 80vh;
+
 }
 i.fa.fa-cutlery {
     color: #FFFFFF;
     font-size: 2em;
 }
-.projects-grid-caption a {
-	text-decoration: none;
+.projects-grid-caption h4 {
     color: #fff;
-    font-size: 1em;
+    font-size: 1.7em;
     font-weight: 700;
     margin: 7.2em 0 0.5em 0;
     text-transform: uppercase;
@@ -1302,7 +1315,7 @@ ul#lightGallery {
 		margin-right: 37.1em !important;
 	}
 	.w3_navigation_pos {
-		left: 35%;
+		left: 44%;
 	}
 	.projects-grid-caption {
 		padding: 19em 1em 1em 1em;
@@ -1334,8 +1347,8 @@ ul#lightGallery {
 		line-height: 0.8em;
 	}
 	.w3_navigation_pos {
-		top: 28%;
-		left: 33.5%;
+		top: 14%;
+		left: 42.5%;
 	}
 	.w3layouts_header_right {
 		float: right;
@@ -1431,7 +1444,7 @@ ul#lightGallery {
 		margin: 0em 0 0em 0;
 	}
 	.w3_navigation_pos {
-		top: 12%;
+		top: 3%;
 		left: 33.5%;
 	}
 	.w3layouts_header_left p {
@@ -1484,7 +1497,7 @@ ul#lightGallery {
 		font-size: .75em;
 	}
 	.w3_navigation_pos {
-		left: 34%;
+		left: 43%;
 	}
 	.w3l_head {
 		font-size: 2em;
@@ -1536,7 +1549,7 @@ ul#lightGallery {
 		float: none;
 		margin: 0;
 		text-align: center;
-		background: #dfdfdf;
+		background: #ffffff00;
 	}
 	.navbar-nav > li > a {
 		margin: 2em 0;
@@ -1753,7 +1766,7 @@ ul#lightGallery {
 	.w3_navigation_pos {
 		position: inherit;
 		float: left;
-		margin-top: .7em;
+		margin-top: .3em;
 	}
 	.callbacks_nav.prev {
 		right: auto;
