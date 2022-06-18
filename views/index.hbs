@@ -1,71 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title> Famebliss | Home </title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Fantasy World Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- gallery -->
-<link rel="stylesheet" href="/static/css/lightGallery.css" type="text/css" media="all" />
-<!-- //gallery -->
-<!-- font-awesome icons -->
-<link href="/static/css/font-awesome.css" rel="stylesheet"> 
-
-<!-- //font-awesome icons -->
-<link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-
-</head>
 	
+	<title> Famebliss | Home </title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Fantasy World Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- gallery -->
+	<link rel="stylesheet" href="/static/css/lightGallery.css" type="text/css" media="all" />
+	<!-- //gallery -->
+	<!-- font-awesome icons -->
+	<link href="/static/css/font-awesome.css" rel="stylesheet">
+
+	<!-- //font-awesome icons -->
+	<link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'rel='stylesheet' type='text/css'>
+
+
+	<style>
+	/* logo css */
+		.heading{
+			color: #fff;
+			margin-top: 23px;
+
+		}
+		.p{
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: #38f000;}
+		.p:hover {
+			position: relative;
+		
+			text-transform: uppercase;
+
+			overflow: hidden;
+			 background: linear-gradient(90deg, #000, #38f000, #000);
+			background-repeat: no-repeat;
+			background-size: 80%;
+			animation: animate 3s linear infinite;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: rgba(0, 0, 0, 0);
+		}
+
+		@keyframes animate {
+			0% {
+				background-position: -500%;
+			}
+
+			100% {
+				background-position: 500%;
+			}
+		}
+		/* logo css */
+
+.test-shine {
+
+  background-color: #337bb2;
+  background-repeat: no-repeat;
+  position:relative;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.test-shine:after {
+  content: "";
+  position: absolute;
+    top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+.test-shine:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.test-shine:active:after {
+  opacity: 0;
+}
+
+.paragrap{
+	color: #999;
+}
+
+	</style>
+	 
+</head>
+
 <body>
-<!-- header -->
+	<!-- header -->
 	{{!-- <div class="header">
 		<div class="w3layouts_header_left">
-				<div class="top-nav-text">
-						<p>Call Us : <span class="call">+00 111 2222 333</span></p>
-						<p>Email Us : <span class="mail"><a href="mailto:info@example.com">info@example.com</a></span></p>
-					</div>
+			<div class="top-nav-text">
+				<p>Call Us : <span class="call">+00 111 2222 333</span></p>
+				<p>Email Us : <span class="mail"><a href="mailto:info@example.com">info@example.com</a></span></p>
+			</div>
 		</div>
 		<div class="w3layouts_header_right">
-			     <form action="#" method="post">
-						<input name="Search heare" type="search" placeholder="Search" required="">
-					
-						<input type="submit" value="">
-					</form>
+			<form action="#" method="post">
+				<input name="Search heare" type="search" placeholder="Search" required="">
+
+				<input type="submit" value="">
+			</form>
 		</div>
 		<div class="clearfix"> </div>
 	</div> --}}
 
-<!-- header -->
+	<!-- header -->
 	<div class="w3_navigation">
 		<div class="container">
 			<nav class="navbar  navbar-default">
 				<div class="navbar-header navbar-left">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 					<div class="w3_navigation_pos">
-						{{!-- <h1><a href="index.html"><span>fame</span>sdfdbliss</a></h1> --}}
-						<h1 id="logo"><a href="/"> <span>Fame</span> <span><img src="/static/images/Logo2.png" alt="logo"></span><span>Bliss</span> </a></h1>
+						<h1><a href="index.html"><span>Fame</span><span class="p">Bliss</span></a></h1>
+
+
 					</div>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-5" id="cl-effect-5">
 						<ul class="nav navbar-nav">
-							<li ><a href="index.html"><span class="active" data-hover="Home">Home</span></a></li>
+							<li><a href="index.html"><span class="active" data-hover="Home">Home</span></a></li>
 							<li><a href="#services" class="scroll"><span data-hover="Services">Our Works</span></a></li>
 							<li><a href="#work" class="scroll"><span data-hover="Gallery">Clients</span></a></li>
 							<li><a href="#projects" class="scroll"><span data-hover="News">Influencer</span></a></li>
@@ -74,15 +162,15 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						</ul>
 					</nav>
 				</div>
-			</nav>	
+			</nav>
 		</div>
 	</div>
-<!-- //header -->
+	<!-- //header -->
 
 
-<!-- banner -->
+	<!-- banner -->
 	<div class="banner">
-			<!--Slider-->
+		<!--Slider-->
 		<div class="slider">
 			<div class="callbacks_container">
 				<ul class="rslides" id="slider3">
@@ -91,9 +179,9 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<img src="/static/images/banner1.jpg" class="img-responsive" alt="Fantasy World">
 						</div>
 						<div class="slider-info">
-							
+
 							<h4>Dragon Fin Soup Ridding </h4>
-							  <p>World building is component of fantasy </p>
+							<p>World building is component of fantasy </p>
 							<a href="#about" class="hvr-shutter-in-horizontal scroll">Read More</a>
 						</div>
 					</li>
@@ -102,10 +190,10 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<img src="/static/images/banner2.jpg" class="img-responsive" alt="Fantasy World">
 						</div>
 						<div class="slider-info">
-						 
+
 							<h4>Girl Dragon fantasy sword wing</h4>
-							   <p>World building is component of fantasy </p>
-					<a href="#about" class="hvr-shutter-in-horizontal scroll">Read More</a>
+							<p>World building is component of fantasy </p>
+							<a href="#about" class="hvr-shutter-in-horizontal scroll">Read More</a>
 						</div>
 					</li>
 					<li>
@@ -113,40 +201,300 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<img src="/static/images/banner3.jpg" class="img-responsive" alt="Fantasy World">
 						</div>
 						<div class="slider-info">
-							
+
 							<h4>Danger bear guy pistol moment</h4>
-						   <p>World building is component of fantasy </p>
-						<a href="#about" class="hvr-shutter-in-horizontal scroll">Read More</a>
+							<p>World building is component of fantasy </p>
+							<a href="#about" class="hvr-shutter-in-horizontal scroll">Read More</a>
 						</div>
 					</li>
 
 
 				</ul>
-				
+
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<!--//Slider-->
 	</div>
-<!-- //banner -->
-<!-- Modal1 -->
-						<div class="modal fade" id="myModal1" role="dialog">
-							<div class="modal-dialog">
-							<!-- Modal content-->
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>Contracts</h4>
-										<img src="/static/images/ab.jpg" alt=" " class="img-responsive">
-										<h5>Donec lobortis pharetra dolor</h5>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, rds which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-									</div>
+	<!-- //banner -->
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Contracts</h4>
+					<img src="/static/images/ab.jpg" alt=" " class="img-responsive">
+					<h5>Donec lobortis pharetra dolor</h5>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, rds which don't look even slightly
+						believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+						anything embarrassing hidden in the middle of text.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal1 -->
+
+	<!-- Ourworks -->
+       <div class="container">
+        <div class="heading d-flex justify-content-center align-items-center">
+            <h1 class="heading" >Our Works</h1>
+        </div>
+        <div class="row my-5" style="">
+          <div class=" col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
+			<div class="test-shine w-100"> <img src="/static/images/relevel.jpg" alt="" class="img-fluid "></div>           
+          </div>
+          <div class="col-md-8 col-sm-8 d-flex align-items-center">
+          <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+          </div> 
+        </div>
+        <hr class="text-white"> 
+        <div class="row my-5 d-flex flex-wrap-reverse">
+            <div class="col-md-8 col-sm-8 d-flex align-items-center">
+                <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+            </div>  
+            <div class="col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
+           	<div class="test-shine w-100"> <img src="/static/images/fifa.jpg" alt="" class="img-fluid "></div>    
+            </div>
+        </div>
+        <hr class="text-white"> 
+        <div class="row my-5 mb-5">
+            <div class="col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
+           	<div class="test-shine w-100"> <img src="/static/images/kukufm.jpg" alt="" class="img-fluid "></div>    
+            </div>
+            <div class="col-md-8 col-sm-8 d-flex align-items-center">
+            <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+            </div>  
+        </div>
+    </div>
+	<!-- //Ourworks-bottom -->
+
+
+	<!-- gallery -->
+	<div class="team-bottom" id="work">
+		<div class="container">
+			<h3 class="w3l_head w3l_head1">Our Client</h3>
+			<p class="w3ls_head_para w3ls_head_para1">View Our Clients</p>
+			<div class="w3layouts_gallery_grids">
+				<ul class="w3l_gallery_grid" id="lightGallery">
+					{{#each clientData}}
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/img/{{this.image_file}}" data-responsive-src="/static/images/8.jpg">
+						<div class="w3layouts_gallery_grid1 box ">
+							<a href="#">
+								<img src="/img/{{this.image_file}}" alt="" class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext">{{this.name}}</h4>
+									<p>{{this.description}}</p>
 								</div>
+							</a>
+						</div>
+					</li>
+					{{/each}}
+					{{!-- <li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g1.jpg" data-responsive-src="/static/images/9.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g1.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g2.jpg" data-responsive-src="/static/images/10.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g2.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g3.jpg" data-responsive-src="/static/images/11.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g3.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g4.jpg" data-responsive-src="/static/images/12.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g4.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g5.jpg" data-responsive-src="/static/images/13.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g5.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g8.jpg" data-responsive-src="/static/images/14.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g8.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g6.jpg" data-responsive-src="/static/images/15.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g6.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li>
+					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
+						data-src="/static/images/g7.jpg" data-responsive-src="/static/images/16.jpg">
+						<div class="w3layouts_gallery_grid1 box">
+							<a href="#">
+								<img src="/static/images/g7.jpg" alt=" " class="img-responsive" />
+								<div class="overbox">
+									<h4 class="title overtext"> Fantasy World</h4>
+
+								</div>
+							</a>
+						</div>
+					</li> --}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //gallery -->
+	<!-- projects -->
+	<div class="projects" id="projects">
+		<div class="container">
+			<div class="port-head">
+				<h3 class="w3l_head w3l_head1">Influencers</h3>
+				<p class="w3ls_head_para w3ls_head_para1">View Our Influencer</p>
+			</div>
+		</div>
+		<div class="projects-grids">
+			<div class="sreen-gallery-cursual">
+
+				<div id="owl-demo" class="owl-carousel owl-theme">
+					{{#each influencerData}}
+					<div class="item">
+						<div class="projects-agile-grid-info " style="height: 520px; width: 400px;">
+							<img src="/img/{{this.image_file}}" alt="Image Not Load" class="img-fluid"
+								style=" object-fit:cover; height: 520px; width: 400px;" />
+							<div class="projects-grid-caption">
+
+								<h4><a target="_blank" href="{{this.brand_url}}">{{this.name}}</a></h4>
+								<p> {{this.description}} </p>
 							</div>
 						</div>
-						<!-- //Modal1 -->
+					</div>
+					{{/each}}
+					{{!-- <div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s2.jpg" alt="" />
+							<div class="projects-grid-caption">
 
-<!-- about -->
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s3.jpg" alt="" />
+							<div class="projects-grid-caption">
+
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s4.jpg" alt="" />
+							<div class="projects-grid-caption">
+
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s5.jpg" alt="" />
+							<div class="projects-grid-caption">
+
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s6.jpg" alt="" />
+							<div class="projects-grid-caption">
+
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s7.jpg" alt="" />
+							<div class="projects-grid-caption">
+
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="projects-agile-grid-info">
+							<img src="/static/images/s1.jpg" alt="" />
+							<div class="projects-grid-caption">
+								<h4>Fantasy World</h4>
+								<p>Lorem ipsum</p>
+							</div>
+						</div>
+					</div> --}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- about -->
 	<div class="about" id="about">
 		<div class="container">
 			<div class="col-md-4 agileits_about_left">
@@ -156,11 +504,12 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			<div class="agileits_banner_bottom_grids">
 				<div class="col-md-6 agileits_banner_bottom_grid_l">
 					<h4>Aliquam a nunc non erat lobortis</h4>
-					<p><i>Vestibulum nec consequat nisl. Aliquam vehicula egestas commodo. 
-						Pellentesque lorem magna, pulvinar sed lacinia et, venenatis in mi.</i>Nullam sodales rutrum nisl, gravida porttitor lectus porta et. 
-						Duis purus arcu, semper at magna faucibus, elementum maximus ligula. 
-						Etiam imperdiet posuere odio gravida vehicula. Nulla consectetur massa 
-						eget tincidunt suscipit. Integer vitae ex eros. Cras ornare dignissim 
+					<p><i>Vestibulum nec consequat nisl. Aliquam vehicula egestas commodo.
+							Pellentesque lorem magna, pulvinar sed lacinia et, venenatis in mi.</i>Nullam sodales rutrum
+						nisl, gravida porttitor lectus porta et.
+						Duis purus arcu, semper at magna faucibus, elementum maximus ligula.
+						Etiam imperdiet posuere odio gravida vehicula. Nulla consectetur massa
+						eget tincidunt suscipit. Integer vitae ex eros. Cras ornare dignissim
 						scelerisque.</p>
 				</div>
 				<div class="col-md-6 agileits_banner_bottom_grid_r">
@@ -175,256 +524,10 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</div>
 		</div>
 	</div>
-<!-- //about-bottom -->
-<!-- services -->
-<div class="services" id="services">
-		 <h3 class="w3l_head w3l_head1">Services</h3>
-			         <p class="w3ls_head_para w3ls_head_para1">View Our Services</p>
-		<div class="services-agile-w3l">
-		<div class="col-md-3 services-gd text-center">
-			<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-				<a href="#" class="hi-icon"><img src="/static/images/s1.png" alt=" " /></a>
-			</div>
-			<h4>Service 1</h4>
-			<p>Lorem Ipsum</p>
-		</div>
-
-       <div class="col-md-3 services-gd text-center">
-			<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-				<a href="#" class="hi-icon"><img src="/static/images/s2.png" alt=" " /></a>
-			</div>
-			<h4>Service 2</h4>
-			<p>Lorem Ipsum</p>
-		</div>
-		<div class="col-md-3 services-gd text-center">
-			<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-				<a href="#" class="hi-icon"><img src="/static/images/s3.png" alt=" " /></a>
-			</div>
-			<h4>Service 3</h4>
-			<p>Lorem Ipsum</p>
-		</div>
-		<div class="col-md-3 services-gd text-center">
-			<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-				<a href="#" class="hi-icon"><img src="/static/images/s4.png" alt=" " /></a>
-			</div>
-			<h4>Service 4</h4>
-			<p>Lorem Ipsum</p>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-</div>
-<!-- //services -->
-
-<!-- gallery -->
-	<div class="team-bottom" id="work">
-		<div class="container">
-			<h3 class="w3l_head w3l_head1">Latest Gallery</h3>
-			<p class="w3ls_head_para w3ls_head_para1">Lorem Ipsum Dolor</p>
-			<div class="w3layouts_gallery_grids">
-				<ul class="w3l_gallery_grid" id="lightGallery">
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/ab.jpg" data-responsive-src="/static/images/8.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/ab.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g1.jpg" data-responsive-src="/static/images/9.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g1.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g2.jpg" data-responsive-src="/static/images/10.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g2.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g3.jpg" data-responsive-src="/static/images/11.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g3.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g4.jpg" data-responsive-src="/static/images/12.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g4.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g5.jpg" data-responsive-src="/static/images/13.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g5.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g8.jpg" data-responsive-src="/static/images/14.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g8.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-								
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g6.jpg" data-responsive-src="/static/images/15.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g6.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-									
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing." data-src="/static/images/g7.jpg" data-responsive-src="/static/images/16.jpg"> 
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="#">
-								<img src="/static/images/g7.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext"> Fantasy World</h4>
-								
-								</div>
-							</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- //gallery -->
-<!-- projects -->
-	<div class="projects" id="projects">
-		<div class="container">
-			<div class="port-head">
-					 <h3 class="w3l_head w3l_head1">Influencers</h3>
-			         <p class="w3ls_head_para w3ls_head_para1">View Our Influencer</p>
-			</div>
-		</div>
-		<div class="projects-grids">
-				<div class="sreen-gallery-cursual">
-
-			<div id="owl-demo" class="owl-carousel owl-theme">
-				{{#each influencerData}}
-					<div class="item">
-						<div class="projects-agile-grid-info " style="height: 520px; width: 400px;">
-							<img src="/img/{{this.image_file}}" alt="Image Not Load"  class="img-fluid" style=" object-fit:cover; height: 520px; width: 400px;"  />
-							<div class="projects-grid-caption"> 
-								
-							    <h4><a target="_blank" href="{{this.brand_url}}">{{this.name}}</a></h4>
-								<p> {{this.description}} </p>
-							</div>
-						</div>	
-					</div>
-				{{/each}}
-					{{!-- <div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s2.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-								
-									<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>	
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s3.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-								
-								<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>	
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s4.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-							
-								<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s5.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-							
-									<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>	
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s6.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-								
-									<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>	
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s7.jpg" alt="" />
-							<div class="projects-grid-caption"> 
-								
-								<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>	
-					</div>
-					<div class="item">
-						<div class="projects-agile-grid-info">
-							<img src="/static/images/s1.jpg" alt="" />
-							<div class="projects-grid-caption">
-									<h4>Fantasy World</h4>
-								<p>Lorem ipsum</p>
-							</div>
-						</div>
-					</div> --}}
-			</div>
-		</div>
-	</div>
-	</div>
+	<!-- //about-bottom -->
 	<!-- //projects -->
-<!-- mail -->
+	{{!--
+	<!-- mail -->
 	<div class="mail" id="mail">
 		<div class="container">
 			<h3 class="w3l_head w3l_head1">Contact Us</h3>
@@ -433,19 +536,22 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<form action="#" method="post">
 					<div class="col-md-6 w3_agile_mail_grid">
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" " required="">
+							<input class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" "
+								required="">
 							<label class="input__label input__label--ichiro" for="input-25">
 								<span class="input__label-content input__label-content--ichiro">Your Name</span>
 							</label>
 						</span>
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" " required="">
+							<input class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" "
+								required="">
 							<label class="input__label input__label--ichiro" for="input-26">
 								<span class="input__label-content input__label-content--ichiro">Your Email</span>
 							</label>
 						</span>
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" " required="">
+							<input class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" "
+								required="">
 							<label class="input__label input__label--ichiro" for="input-27">
 								<span class="input__label-content input__label-content--ichiro">Your Phone Number</span>
 							</label>
@@ -460,14 +566,53 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				</form>
 			</div>
 		</div>
-	</div>	
-<!-- mail -->
-<!-- footer -->
+	</div>
+	
+	<!-- mail --> --}}
+		<!-- services -->
+	<div class="services" id="mail">
+		<h3 class="w3l_head w3l_head1">Contact</h3>
+		<p class="w3ls_head_para w3ls_head_para1">View Our Contacts</p>
+		<div class="services-agile-w3l">
+			<div class="col-md-3 services-gd text-center">
+				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+					<a href="#" class="hi-icon"><img src="/static/images/instagram.png" alt=" " /></a>
+				</div>
+				{{!-- <h4>Service 1</h4>
+				<p>Lorem Ipsum</p> --}}
+			</div>
+
+			<div class="col-md-3 services-gd text-center">
+				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+					<a href="#" class="hi-icon"><img src="/static/images/twitter.png" alt=" " /></a>
+				</div>
+				{{!-- <h4>Service 2</h4>
+				<p>Lorem Ipsum</p> --}}
+			</div>
+			<div class="col-md-3 services-gd text-center">
+				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+					<a href="#" class="hi-icon"><img src="/static/images/telegram.png" alt=" " /></a>
+				</div>
+				{{!-- <h4>Service 3</h4>
+				<p>Lorem Ipsum</p> --}}
+			</div>
+			<div class="col-md-3 services-gd text-center">
+				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+					<a href="#" class="hi-icon"><img src="/static/images/facebook.png" alt=" " /></a>
+				</div>
+				{{!-- <h4>Service 4</h4>
+				<p>Lorem Ipsum</p> --}}
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- footer -->
 	<div class="w3l_footer">
 		<div class="container">
-			
+
 			<div class="w3ls_footer_grids">
-				
+
 				<div class="w3ls_footer_grid">
 					<div class="col-md-4 w3ls_footer_grid_left">
 						<div class="w3ls_footer_grid_leftl">
@@ -507,83 +652,83 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			<p>© 2017 Fantasy World. All Rights Reserved.</p>
 		</div>
 	</div>
-<!-- //footer -->
+	<!-- //footer -->
 
-<!--banner Slider starts Here-->
-<script src="/static/js/jquery-2.2.3.min.js"></script> 
-						<script src="/static/js/responsiveslides.min.js"></script>
-							<script>
-								// You can also use "$(window).load(function() {"
-								$(function () {
-								  // Slideshow 4
-								  $("#slider3").responsiveSlides({
-									auto: true,
-									pager:false,
-									nav:true,
-									speed: 500,
-									namespace: "callbacks",
-									before: function () {
-									  $('.events').append("<li>before event fired.</li>");
-									},
-									after: function () {
-									  $('.events').append("<li>after event fired.</li>");
-									}
-								  });
-							
-								});
-							 </script>
-							 <!-- js -->
-<!-- start-smoth-scrolling -->
+	<!--banner Slider starts Here-->
+	<script src="/static/js/jquery-2.2.3.min.js"></script>
+	<script src="/static/js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider3").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- js -->
+	<!-- start-smoth-scrolling -->
 	<script src="/static/js/lightGallery.js"></script>
 	<script>
-    	 $(document).ready(function() {
+		$(document).ready(function () {
 			$("#lightGallery").lightGallery({
-				mode:"fade",
-				speed:800,
-				caption:true,
-				desc:true,
-				mobileSrc:true
+				mode: "fade",
+				speed: 800,
+				caption: true,
+				desc: true,
+				mobileSrc: true
 			});
 		});
-    </script>
+	</script>
 
-<script src="/static/js/owl.carousel.js"></script> 
-<link href="/static/css/owl.theme.css" rel="stylesheet">
- <link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
-<script>
-$(document).ready(function() { 
-	$("#owl-demo").owlCarousel({
- 
-		autoPlay: 3000, //Set AutoPlay to 3 seconds
-		  autoPlay : true,
-		   navigation :true,
+	<script src="/static/js/owl.carousel.js"></script>
+	<link href="/static/css/owl.theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
 
-		items : 4,
-		itemsDesktop : [640,5],
-		itemsDesktopSmall : [414,4]
- 
-	});
-	
-}); 
-</script>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="/static/js/move-top.js"></script>
-<script type="text/javascript" src="/static/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-<!-- //js -->
-	<script src="/static/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- here stars scrolling icon -->
+				autoPlay: 3000, //Set AutoPlay to 3 seconds
+				autoPlay: true,
+				navigation: true,
+
+				items: 4,
+				itemsDesktop: [640, 5],
+				itemsDesktopSmall: [414, 4]
+
+			});
+
+		}); 
+	</script>
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="/static/js/move-top.js"></script>
+	<script type="text/javascript" src="/static/js/easing.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- //js -->
+	<script src="/static/js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
 			/*
 				var defaults = {
 				containerID: 'toTop', // fading element id
@@ -592,11 +737,12 @@ $(document).ready(function() {
 				easingType: 'linear' 
 				};
 			*/
-								
+
 			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
+
+		});
 	</script>
-<!-- //here ends scrolling icon -->
+	<!-- //here ends scrolling icon -->
 </body>
+
 </html>

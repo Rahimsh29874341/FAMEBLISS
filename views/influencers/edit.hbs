@@ -77,3 +77,35 @@
        {{/each}}
     </div>
 </div>
+
+
+<script>
+                
+    $('#addinfluencer').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 5,
+                maxlength: 50
+            },
+            description: {
+                maxlength: 500
+            }
+
+        
+          
+        },
+        messages: {
+            name: {
+                required: 'Name is required',
+                minlength: 'Minimum length is 5',
+                maxlength: 'Maximum length is 50'
+            },
+            description: {
+                maxlength: 'Maximum length is 500'
+            }
+           
+        }
+    });
+
+</script>

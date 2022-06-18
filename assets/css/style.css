@@ -131,13 +131,12 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 }
 .w3_navigation_pos {
     position: absolute;
-    top: 10%;
-    left: 35%;
+	top: 24%;
+    left: 42%;
     z-index: 999;
 }
 .w3_navigation_pos h1{
-	padding: 0rem 1rem;
-	border : 3px solid green ;
+
 }
 
 .w3_navigation_pos h1 a img {
