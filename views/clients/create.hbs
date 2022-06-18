@@ -54,8 +54,7 @@
                                 </li>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>
-                                <button id="cancel-btn" class="btn btn btn-info ml-3 " style="width:100px ;"
-                                    type="submit">Cancel
+                                <button id="cancelBtn" class="btn btn btn-info ml-3 " style="width:100px ;">Cancel
                                 </button>
                             </ul>
                         </form>
@@ -110,6 +109,11 @@
             }
            
         }
+    });
+
+       $("#cancelBtn").click(function () {
+         $("#actionContainer").html("");
+         focusAction("tableContainer");
     });
 
 </script>
