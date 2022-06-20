@@ -14,6 +14,11 @@
     i{
         color: red;
     }
+    .validate{
+        font-size: 15px;
+        color: red;
+    }
+
 </style>
 
         <!-- form -->
@@ -32,21 +37,22 @@
                 <div class="row">
                     <div class="contact-form pt-4">
 
-                        <form class="form-group" id="form" action="/api/insert" id="addinfluencer" method="POST" class="tab" enctype="multipart/form-data">
+                        <form class="form-group" action="/api/insert" id="addinfluencer" method="POST" class="tab" enctype="multipart/form-data">
                             <div class="form-group">
                                 <div class="form-group">
-                                      <label for="name">Name:<i>*</i></label>
-                                 <input required class="form-control" name="name" type="text" placeholder="Name">
-                                 <label  id="name-error" class="error" for="name" ></label>
+                                      <label>Name:<i>*</i></label>
+                                 <input  class="form-control" name="name" type="text" placeholder="Name">
+                                 <label  id="name-error" class="error validate" for="name" ></label>
                                 </div>
                                 <div class="form-group">
-                                      <label for="name">Description:<i>*</i></label>
-                                    <input required class="form-control" name="description" type="textarea"
+                                      <label >Description:<i>*</i></label>
+                                    <input  class="form-control" name="description" type="textarea"
                                         placeholder="Decribe your brand">
-                                       <label  id="description-error" class="error" for="description" ></label>
+                                       <label id="description-error" class="error validate" for="description" ></label>
                                 </div>
                                 <div class="form-group">
-                                      <label for="name">Image:<i>* </i> <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)"></label>
+                                      <label >Image:<i>* </i> 
+                                      <input id="file" type="file" accept="Image/*" name="image" onchange="loadFile(event)"></label>
                                        <span>H:426px W:640px</span>
                                 </div>
                                 <div class="form-group d-flex align-items-center">
@@ -93,23 +99,26 @@
         rules: {
             name: {
                 required: true,
-                minlength: 5,
                 maxlength: 50
             },
             description: {
-                maxlength: 500
-            }
+                required:true,
+                maxlength: 100,
+
+            },
+        
           
         },
         messages: {
             name: {
                 required: 'Name is required',
-                minlength: 'Minimum length is 5',
                 maxlength: 'Maximum length is 50'
             },
             description: {
-                maxlength: 'Maximum length is 500'
-            }
+                required:'Description is required',
+                maxlength: 'Maximum length is 100'
+            },
+     
            
         }
     });
