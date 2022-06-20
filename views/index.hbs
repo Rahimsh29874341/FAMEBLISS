@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	
+
 	<title> Famebliss | Home </title>
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,26 +23,31 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //font-awesome icons -->
 	<link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'rel='stylesheet' type='text/css'>
+	<link
+		href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+		rel='stylesheet' type='text/css'>
 
 
 	<style>
-	/* logo css */
-		.heading{
+		/* logo css */
+		.heading {
 			color: #fff;
 			margin-top: 23px;
 
 		}
-		.p{
+
+		.logo {
 			-webkit-background-clip: text;
-			-webkit-text-fill-color: #38f000;}
-		.p:hover {
+			-webkit-text-fill-color: #38f000;
+		}
+
+		.logo:hover {
 			position: relative;
-		
+
 			text-transform: uppercase;
 
 			overflow: hidden;
-			 background: linear-gradient(90deg, #000, #38f000, #000);
+			background: linear-gradient(90deg, #000, #38f000, #000);
 			background-repeat: no-repeat;
 			background-size: 80%;
 			animation: animate 3s linear infinite;
@@ -59,57 +64,149 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				background-position: 500%;
 			}
 		}
+
+
 		/* logo css */
 
-.test-shine {
+		.test-shine {
 
-  background-color: #337bb2;
-  background-repeat: no-repeat;
-  position:relative;
-  border-radius: 5px;
-  overflow: hidden;
 
+			background-repeat: no-repeat;
+			position: relative;
+			border-radius: 5px;
+			overflow: hidden;
+
+		}
+
+		.test-shine:after {
+			content: "";
+			position: absolute;
+			top: -50%;
+			left: -60%;
+			width: 20%;
+			height: 200%;
+			opacity: 0;
+			transform: rotate(30deg);
+			background: rgba(255, 255, 255, 0.13);
+			background: linear-gradient(to right,
+					rgba(255, 255, 255, 0.13) 0%,
+					rgba(255, 255, 255, 0.13) 77%,
+					rgba(255, 255, 255, 0.5) 92%,
+					rgba(255, 255, 255, 0.0) 100%);
+		}
+
+		/* Hover state - trigger effect */
+		.test-shine:hover:after {
+			opacity: 1;
+			left: 130%;
+			transition-property: left, top, opacity;
+			transition-duration: 0.7s, 0.7s, 0.15s;
+			transition-timing-function: ease;
+		}
+
+		/* Active state */
+		.test-shine:active:after {
+			opacity: 0;
+		}
+
+		.paragrap {
+			color: #999;
+		}
+
+
+		/* social handle */
+
+		.icon i{
+			text-align: center;
+	font-size: 2rem;
+			margin-bottom: 0rem;
+			color: #eee;
+		}
+
+		.ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 1rem;
+			list-style-type: none;
+			font-size: 1rem;
+		}
+
+		.ul li {
+			padding: 1rem;
+		}
+
+	
+
+		/* transition for social icon hover animation */
+		.fa-facebook,
+		.fa-codepen,
+		.fa-youtube,
+		.fa-instagram,
+		.fa-github,
+		.fa-pinterest {
+			transition: 0.4s;
+			cursor: pointer;
+		}
+
+		/* social media icons hover color */
+		.fa-facebook:hover,
+		.fa-facebook:focus {
+			color: #1877f2;
+			transform: scale(1.1);
+		}
+
+		.fa-twitter:hover,
+		.fa-twitter:focus {
+			color: #1da1f2;
+			transform: scale(1.1);
+		}
+
+		.fa-youtube:hover,
+		.fa-youtube:focus {
+			color: #df2426;
+			transform: scale(1.1);
+		}
+
+		.fa-instagram:hover,
+		.fa-instagram:focus {
+			color: #bd22a2;
+			transform: scale(1.1);
+		}
+
+@media(max-width: 384px){
+	.icon i{
+		font-size:23px;
+	}
 }
+		/* slider  */
+		@media (max-width:470px) {
+			.paragrap {
+				font-size: 7px;
+				margin: 5px;
 
-.test-shine:after {
-  content: "";
-  position: absolute;
-    top: -50%;
-  left: -60%;
-  width: 20%;
-  height: 200%;
-  opacity: 0;
-  transform: rotate(30deg);
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
-  );
-}
+			}
 
-/* Hover state - trigger effect */
-.test-shine:hover:after {
-  opacity: 1;
-  left: 130%;
-  transition-property: left, top, opacity;
-  transition-duration: 0.7s, 0.7s, 0.15s;
-  transition-timing-function: ease;
-}
+			.image {
 
-/* Active state */
-.test-shine:active:after {
-  opacity: 0;
-}
+				padding: 10px;
 
-.paragrap{
-	color: #999;
-}
+			}
+		}
 
+		.image {
+			padding: 10px;
+
+		}
+
+		.paragrap {
+			margin: 5px;
+			text-align: justify;
+		}
+		
 	</style>
-	 
+
 </head>
 
 <body>
@@ -144,7 +241,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						<span class="icon-bar"></span>
 					</button>
 					<div class="w3_navigation_pos">
-						<h1><a href="index.html"><span></span><span class="p">Fame Bliss</span></a></h1>
+						<h1><a href="/"><span></span><span class="logo">Fame Bliss</span></a></h1>
 
 
 					</div>
@@ -153,7 +250,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-5" id="cl-effect-5">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html"><span class="active" data-hover="Home">Home</span></a></li>
+							<li><a href="/"><span class="active" data-hover="Home">Home</span></a></li>
 							<li><a href="#services" class="scroll"><span data-hover="Services">Our Works</span></a></li>
 							<li><a href="#work" class="scroll"><span data-hover="Gallery">Clients</span></a></li>
 							<li><a href="#projects" class="scroll"><span data-hover="News">Influencer</span></a></li>
@@ -238,37 +335,57 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //Modal1 -->
 
 	<!-- Ourworks -->
-       <div class="container">
-        <div class="heading d-flex justify-content-center align-items-center">
-            <h1 class="heading" >Our Works</h1>
-        </div>
-        <div class="row my-5" style="">
-          <div class=" col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
-			<div class="test-shine w-100"> <img src="/static/images/relevel.jpg" alt="" class="img-fluid "></div>           
-          </div>
-          <div class="col-md-8 col-sm-8 d-flex align-items-center">
-          <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
-          </div> 
-        </div>
-        <hr class="text-white"> 
-        <div class="row my-5 d-flex flex-wrap-reverse">
-            <div class="col-md-8 col-sm-8 d-flex align-items-center">
-                <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
-            </div>  
-            <div class="col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
-           	<div class="test-shine w-100"> <img src="/static/images/fifa.jpg" alt="" class="img-fluid "></div>    
-            </div>
-        </div>
-        <hr class="text-white"> 
-        <div class="row my-5 mb-5">
-            <div class="col-md-4 col-sm-4 d-flex justify-content-center align-items-center">
-           	<div class="test-shine w-100"> <img src="/static/images/kukufm.jpg" alt="" class="img-fluid "></div>    
-            </div>
-            <div class="col-md-8 col-sm-8 d-flex align-items-center">
-            <p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure? Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
-            </div>  
-        </div>
-    </div>
+	<div class="container">
+		<h3 class="w3l_head w3l_head1 mt-5">Our Works</h3>
+		<p class="w3ls_head_para w3ls_head_para1">View Our Works</p>
+
+		<div id="slide" class="row my-3" style="">
+			<div class="  col-4 d-flex justify-content-center align-items-center image">
+				<div class="test-shine w-100 "> <img src="/static/images/relevel.jpg" alt="" class="img-fluid ">
+				</div>
+			</div>
+			<div class=" col-8 d-flex align-items-center media">
+				<p class=" paragrap mb-0 text-capitalize media-body">Lorem ipsum dolor sit amet consectetur adipisicing
+					elit.
+					Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure?
+					Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum
+					quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero
+					voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+			</div>
+        
+		</div>
+		<hr class="text-white">
+      
+		<div id="slide" class="row my-5 d-flex ">
+			<div class="col-8 d-flex align-items-center ">
+				<p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure?
+					Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum
+					quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero
+					voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+			</div>
+           
+			<div class="col-4 d-flex justify-content-center align-items-center image">
+				<div class="test-shine w-100 "> <img src="/static/images/fifa.jpg" alt="" class="img-fluid "></div>
+			</div>
+		</div>
+		<hr class="text-white">
+      
+		<div id="slide" class="row my-5 mb-5">
+			<div class="col-4 d-flex justify-content-center align-items-center image">
+				<div class="test-shine w-100 "> <img src="/static/images/kukufm.jpg" alt="" class="img-fluid ">
+				</div>
+			</div>
+			<div class="col-8 d-flex align-items-center">
+				<p class=" paragrap mb-0 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Maxime, reprehenderit magnam sequi dicta recusandae assumenda consectetur ex quidem iure?
+					Perspiciatis laboriosam inventore eligendi ex perferendis magni? Debitis iste accusantium laborum
+					quisquam totam repudiandae, veritatis itaque a porro labore eius illum nemo sapiente est, libero
+					voluptatum deleniti quae vitae saepe quo officia officiis dolor doloribus! Veritatis?</p>
+			  
+			</div>
+		</div>
+	</div>
 	<!-- //Ourworks-bottom -->
 
 
@@ -280,8 +397,8 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			<div class="w3layouts_gallery_grids">
 				<ul class="w3l_gallery_grid" id="lightGallery">
 					{{#each clientData}}
-					<li data-title="Games" data-desc="Lorem Ipsum is simply dummy text of the printing."
-						data-src="/img/{{this.image_file}}" data-responsive-src="/static/images/8.jpg">
+					<li data-title="{{this.name}}" data-desc="{{this.description}}" data-src="/img/{{this.image_file}}"
+						data-responsive-src="/img/{{this.image_file}}">
 						<div class="w3layouts_gallery_grid1 box ">
 							<a href="#">
 								<img src="/img/{{this.image_file}}" alt="" class="img-responsive" />
@@ -408,9 +525,8 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<div id="owl-demo" class="owl-carousel owl-theme">
 					{{#each influencerData}}
 					<div class="item">
-						<div class="projects-agile-grid-info " style="height: 520px; width: 400px;">
-							<img src="/img/{{this.image_file}}" alt="Image Not Load" class="img-fluid"
-								style=" object-fit:cover; height: 520px; width: 400px;" />
+						<div class="projects-agile-grid-info ">
+							<img src="/img/{{this.image_file}}" alt="Image Not Load"/>
 							<div class="projects-grid-caption">
 
 								<h4><a target="_blank" href="{{this.brand_url}}">{{this.name}}</a></h4>
@@ -502,7 +618,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<p class="w3ls_head_para">who we are</p>
 			</div>
 			<div class="agileits_banner_bottom_grids">
-				<div class="col-md-6 agileits_banner_bottom_grid_l">
+				<div class="col-md-6 col-sm-6 about agileits_banner_bottom_grid_l">
 					<h4>Aliquam a nunc non erat lobortis</h4>
 					<p><i>Vestibulum nec consequat nisl. Aliquam vehicula egestas commodo.
 							Pellentesque lorem magna, pulvinar sed lacinia et, venenatis in mi.</i>Nullam sodales rutrum
@@ -512,7 +628,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						eget tincidunt suscipit. Integer vitae ex eros. Cras ornare dignissim
 						scelerisque.</p>
 				</div>
-				<div class="col-md-6 agileits_banner_bottom_grid_r">
+				<div class="col-md-6 col-sm-6 agileits_banner_bottom_grid_r">
 					<div class="agileits_banner_btm_grid_r">
 						<img src="/static/images/ab.jpg" alt=" " class="img-responsive">
 						{{!-- <div class="agileits_banner_btm_grid_r_pos">
@@ -524,93 +640,28 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</div>
 		</div>
 	</div>
-	<!-- //about-bottom -->
-	<!-- //projects -->
-	{{!--
-	<!-- mail -->
-	<div class="mail" id="mail">
-		<div class="container">
-			<h3 class="w3l_head w3l_head1">Contact Us</h3>
-			<p class="w3ls_head_para w3ls_head_para1">send us a message</p>
-			<div class="w3_mail_grids">
-				<form action="#" method="post">
-					<div class="col-md-6 w3_agile_mail_grid">
-						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" "
-								required="">
-							<label class="input__label input__label--ichiro" for="input-25">
-								<span class="input__label-content input__label-content--ichiro">Your Name</span>
-							</label>
-						</span>
-						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" "
-								required="">
-							<label class="input__label input__label--ichiro" for="input-26">
-								<span class="input__label-content input__label-content--ichiro">Your Email</span>
-							</label>
-						</span>
-						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" "
-								required="">
-							<label class="input__label input__label--ichiro" for="input-27">
-								<span class="input__label-content input__label-content--ichiro">Your Phone Number</span>
-							</label>
-						</span>
-						<input type="submit" value="Submit">
-					</div>
-					<div class="col-md-6 w3_agile_mail_grid">
-						<textarea name="Message" placeholder="Your Message" required=""></textarea>
-						<input type="submit" value="Submit">
-					</div>
-					<div class="clearfix"> </div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	<!-- mail --> --}}
-		<!-- services -->
-	<div class="services" id="mail">
-		<h3 class="w3l_head w3l_head1">Contact</h3>
-		<p class="w3ls_head_para w3ls_head_para1">View Our Contacts</p>
-		<div class="services-agile-w3l">
-			<div class="col-md-3 services-gd text-center">
-				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-					<a href="#" class="hi-icon"><img src="/static/images/instagram.png" alt=" " /></a>
-				</div>
-				{{!-- <h4>Service 1</h4>
-				<p>Lorem Ipsum</p> --}}
-			</div>
 
-			<div class="col-md-3 services-gd text-center">
-				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-					<a href="#" class="hi-icon"><img src="/static/images/twitter.png" alt=" " /></a>
-				</div>
-				{{!-- <h4>Service 2</h4>
-				<p>Lorem Ipsum</p> --}}
-			</div>
-			<div class="col-md-3 services-gd text-center">
-				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-					<a href="#" class="hi-icon"><img src="/static/images/telegram.png" alt=" " /></a>
-				</div>
-				{{!-- <h4>Service 3</h4>
-				<p>Lorem Ipsum</p> --}}
-			</div>
-			<div class="col-md-3 services-gd text-center">
-				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
-					<a href="#" class="hi-icon"><img src="/static/images/facebook.png" alt=" " /></a>
-				</div>
-				{{!-- <h4>Service 4</h4>
-				<p>Lorem Ipsum</p> --}}
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!-- //services -->
 	<!-- footer -->
 	<div class="w3l_footer">
 		<div class="container">
+			<div>
+				<ul class="ul">
+					<li><a class="icon" href="https://www.facebook.com/martydevelopment/" target="_blank">
+							<i class=" fab fa fa-facebook" tabindex="0"></i>
+						</a></li>
 
+					<li><a class="icon" href="https://www.instagram.com/marty.development/" target="_blank">
+							<i class="fab  fa fa-instagram" tabindex="0"></i>
+						</a></li>
+
+					<li><a class="icon" href="#">
+							<i class="fab fa fa-youtube" tabindex="0" target="_blank"></i>
+						</a></li>
+					<li><a class="icon" href="#">
+							<i class="fab fa fa-twitter" tabindex="0" target="_blank"></i>
+						</a></li>
+				</ul>
+			</div>
 			<div class="w3ls_footer_grids">
 
 				<div class="w3ls_footer_grid">

@@ -109,7 +109,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	white-space: nowrap;
+	white-space: wrap;
 	position: absolute;
 }
 #lightGallery-slider .lightGallery-slide {

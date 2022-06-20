@@ -1,5 +1,5 @@
 {{>_header}}
-<div class="container">
+
     <div class=" mb-3 btn-group d-flex justify-content-center" role="group"
         aria-label="Basic checkbox toggle button group">
 
@@ -7,23 +7,25 @@
         <button class="btn btn-outline-primary" id="newBtn" type="button">New</button>
 
     </div>
+<div class="table-responsive">
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="bg-dark text-primary">
             <tr>
-                <th scope="col">id</th>
-                <th scope="col">image</th>
+              
+                <th scope="col">Image</th>
                 <th scope="col">Name</th>
-                <th scope="col">description</th>
-                <th scope="col">status</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
             {{#each data}}
             <tr>
-                <td> {{this.id}}</td>
-                <td class=""> <img src="/img/{{{this.image_file}}}" alt="" style="height: 3rem;width:3rem;"> </td>
+             
+                <td> <img src="/img/{{{this.image_file}}}" alt="" class="img-fluid" style="width:200px ; "> </td>
                 <td> {{this.name}} </td>
+                
                 <td> {{this.description}} </td>
                  <td> {{this.status}} </td>
                 <td>
@@ -36,8 +38,8 @@
             {{/each}}
         </tbody>
     </table>
-
 </div>
+
 
 <script>
 

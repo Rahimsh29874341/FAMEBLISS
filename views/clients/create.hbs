@@ -20,7 +20,7 @@
         <div class="container">
     <div class="row">
 
-        <div class="col-md-8 col-10 col-sm-8">
+        <div class="col-md-8">
             <div class="form-inside">
                 <div class="form-head">
                     <div class="section-head text-center">
@@ -33,30 +33,33 @@
                     <div class="contact-form pt-4">
 
                         <form class="form-group" id="form" action="/api/insert" id="addinfluencer" method="POST" class="tab" enctype="multipart/form-data">
-                            <ul class="form-list">
-                                <li class="form-itmes">
-                                 <label  id="name-error" class="error" for="name" ></label>
+                            <div class="form-group">
+                                <div class="form-group">
+                                      <label for="name">Name:<i>*</i></label>
                                  <input required class="form-control" name="name" type="text" placeholder="Name">
-                                </li>
-                                <li class="form-itmes">
-                                       <label  id="description-error" class="error" for="description" ></label>
+                                 <label  id="name-error" class="error" for="name" ></label>
+                                </div>
+                                <div class="form-group">
+                                      <label for="name">Description:<i>*</i></label>
                                     <input required class="form-control" name="description" type="textarea"
                                         placeholder="Decribe your brand">
-                                </li>
-                                <li class="form-items">
-                                    <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)">
-                                </li>
-                                <li class="form-items d-flex align-items-center">
+                                       <label  id="description-error" class="error" for="description" ></label>
+                                </div>
+                                <div class="form-group">
+                                      <label for="name">Image:<i>* </i> <input id="file" required type="file" accept="Image/*" name="image" onchange="loadFile(event)"></label>
+                                       <span>H:426px W:640px</span>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <span for="Active">Active</span><br>
                                     <input type="radio" id="Active" name="status" value="Active" class="mx-2">
-                                    <label for="Active">Active</label><br>
+                                    <span for="Inactive">Inactive</span><br>
                                     <input type="radio" id="Inactive" name="status" value="Inactive" class="mx-2">
-                                    <label for="Inactive">Inactive</label><br>
-                                </li>
+                                </div>
                                 <button id="add-user" class="btn btn btn-info ml-3 " style="width:100px ;"
                                     type="submit">Save</button>
                                 <button id="cancelBtn" class="btn btn btn-info ml-3 " style="width:100px ;">Cancel
                                 </button>
-                            </ul>
+                            </div>
                         </form>
 
                     </div>
@@ -64,7 +67,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-2 col-sm-4 d-flex justify-content-center align-items-center">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
             <img id="output" class="img-fluid img-thumbnail" src="/static/images/default.jpg"  />
         </div>
     </div>
